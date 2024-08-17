@@ -105,4 +105,18 @@ btn_left.addEventListener("click",() => {
 })
 
 
-
+setInterval(() => {
+	console.log( "Vous venez de faire");
+	 pb[k].classList.remove("dot_selected");
+	k--;
+	if(k<0){
+		k=3;
+	}
+	console.log(k);
+	const img=myArray[k].image;
+	const texte=myArray[k].tagLine;
+	console.log(img); 
+    text.innerHTML=texte;
+	banner.src="./assets/images/slideshow/"+img;
+	pb[k].classList.add("dot_selected");
+}, 2000);
